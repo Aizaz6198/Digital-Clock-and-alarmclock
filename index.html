@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        ul.clock_menu {
+            list-style: none;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a8938533a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="menu"> <i class="fa-solid fa-bars" onclick="toggleMenu()">
+        <ul id="clockMenu" class="clock_menu" >
+            <li><a href="index.html">Clock</a>
+            </li>
+            <li> <a href="./alarm_clock/alarm.html">Alarm</a>
+            </li>
+            <li>
+             <a href="./stopwatch/stopwatch.html">Stopwatch</a>
+            </li>
+        </ul>
+    </i></div>
+
+    <div class="container">
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+        <span id="session">AM</span>
+
+    </div>
+        <script src="script.js" ></script>
+
+</body>
+</html>

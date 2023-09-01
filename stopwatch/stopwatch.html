@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="./stopwatch.css">
+    <style>
+        ul.clock_menu {
+            list-style: none;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a8938533a0.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="menu"> <i class="fa-solid fa-bars" onclick="toggleMenu()">
+        <ul id="clockMenu" class="clock_menu" >
+            <li><a href="../index.html">Clock</a>
+            </li>
+            <li> <a href="../alarm_clock/alarm.html">Alarm</a>
+            </li>
+            <li>
+             <a href="./stopwatch.html">Stopwatch</a>
+            </li>
+        </ul>
+    </i></div>
+
+    <div class="container">
+        <div class="wrapper">
+            <p>
+                <span class="mins">00</span>:<span class="seconds">00</span>:<span class="tens">00</span>
+            </p> <br>
+            <button class="btn-start">Start</button>
+            <button class="btn-stop">Stop</button>
+            <button class="btn-reset">Reset</button>
+        </div>
+    </div>
+
+    <script src="./stopwatch.js"></script>
+</body>
+</html>

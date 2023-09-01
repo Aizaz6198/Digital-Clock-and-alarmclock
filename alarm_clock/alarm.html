@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>Alarm App</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="alarm.css">
+    <style>
+      ul.clock_menu {
+          list-style: none;
+      }
+  </style>
+    <script src="https://kit.fontawesome.com/a8938533a0.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="menu"> <i class="fa-solid fa-bars" onclick="toggleMenu()">
+      <ul id="clockMenu" class="clock_menu">
+          <li><a href="../index.html">Clock</a>
+          </li>
+          <li> <a href="./alarm.html">Alarm</a>
+          </li>
+          <li>
+           <a href="../stopwatch/stopwatch.html">Stopwatch</a>
+          </li>
+      </ul>
+  </i></div>
+
+    <div class="wrapper">
+      <div class="timer-display">00:00:00</div>
+      <div class="container">
+        <div class="inputs">
+          <input
+            type="number"
+            id="hourInput"
+            placeholder="00"
+            min="0"
+            max="23"
+          />
+          <input
+            type="number"
+            id="minuteInput"
+            placeholder="00"
+            min="0"
+            max="59"
+          />
+          <input
+            type="number"
+            id="secondInput"
+            placeholder="00"
+            min="0"
+            max="59"
+          />
+        </div>
+                <button id="set">Add Alarm</button>
+        <div class="activeAlarms"></div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="alarm.js"></script>
+  </body>
+</html>
