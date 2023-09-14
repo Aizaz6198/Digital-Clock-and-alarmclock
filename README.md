@@ -1,1 +1,2 @@
-# Digital-Clock-and-alarmclock
+# Digital Clock with alarm and stopwatch
+
