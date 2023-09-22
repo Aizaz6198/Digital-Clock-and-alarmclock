@@ -1,4 +1,3 @@
-//Initial References
 let timerRef = document.querySelector(".timer-display");
 const hourInput = document.getElementById("hourInput");
 const minuteInput = document.getElementById("minuteInput");
@@ -6,16 +5,16 @@ const activeAlarms = document.querySelector(".activeAlarms");
 const setAlarm = document.getElementById("set");
 let alarmsArray = [];
 let alarmSound = new Audio("./alarm.mp3");
-
+// These variables are used to initialize and manage alarm-related values.
 let initialHour = 0,
   initialMinute = 0,
   initialSecond= 0,
   alarmIndex = 0;
 
-//Append zeroes for single digit
+//This ensures that single-digit values are displayed as two digits.
 const appendZero = (value) => (value < 10 ? "0" + value : value);
 
-//Search for value in object
+// it searches for a specific value within an array of objects (alarmsArray). 
 const searchObject = (parameter, value) => {
   let alarmObject,
     objIndex,
@@ -31,7 +30,7 @@ const searchObject = (parameter, value) => {
   return [exists, alarmObject, objIndex];
 };
 
-//Display Time
+//Display current time on the webpage.
 function displayTimer() {
   let date = new Date();
   let [hours, minutes, seconds] = [
@@ -39,7 +38,6 @@ function displayTimer() {
     appendZero(date.getMinutes()),
     appendZero(date.getSeconds()),
   ];
-  //Display time
   timerRef.innerHTML = `${hours}:${minutes}:${seconds}`;
 
   //Alarm
@@ -59,7 +57,7 @@ const inputCheck = (inputValue) => {
   }
   return inputValue;
 };
-
+// These event listeners ensure that the user-input values are always formatted with a leading zero for single digits.
 hourInput.addEventListener("input", () => {
   hourInput.value = inputCheck(hourInput.value);
 });
@@ -68,17 +66,14 @@ minuteInput.addEventListener("input", () => {
   minuteInput.value = inputCheck(minuteInput.value);
 });
 
-//Create alarm div
+//Create alarm
 
 const createAlarm = (alarmObj) => {
-  //Keys from object
   const { id, alarmHour, alarmMinute, alarmSecond } = alarmObj;
-  //Alarm div
   let alarmDiv = document.createElement("div");
   alarmDiv.classList.add("alarm");
   alarmDiv.setAttribute("data-id", id);
   alarmDiv.innerHTML = `<span>${alarmHour}:${alarmMinute}:${alarmSecond}</span>`;
-  //checkbox
   let checkbox = document.createElement("input");
   checkbox.setAttribute("type", "checkbox");
   checkbox.addEventListener("click", (e) => {
@@ -101,8 +96,6 @@ const createAlarm = (alarmObj) => {
 //Set Alarm
 setAlarm.addEventListener("click", () => {
   alarmIndex += 1;
-
-  //alarmObject
   let alarmObj = {};
   alarmObj.id = `${alarmIndex}_${hourInput.value}_${minuteInput.value}_${secondInput.value}`;
   alarmObj.alarmHour = hourInput.value;
