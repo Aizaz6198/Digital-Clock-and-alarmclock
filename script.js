@@ -10,7 +10,7 @@ function displayTime(){
     }else{
         session.innerHTML = 'AM';
     }
-
+// AM/PM 
     if(hrs > 12){
         hrs = hrs - 12;
     }
@@ -19,6 +19,7 @@ function displayTime(){
     document.getElementById('minutes').innerHTML = min;
     document.getElementById('seconds').innerHTML = sec;
 }
+// to hide the main menu list
 function toggleMenu() {
     var menu = document.getElementById("clockMenu");
     if (getComputedStyle(menu).display === "none") {
@@ -27,4 +28,5 @@ function toggleMenu() {
         menu.style.display = "none";
     }
 }
+// creating a real-time effect.
 setInterval(displayTime, 10);
