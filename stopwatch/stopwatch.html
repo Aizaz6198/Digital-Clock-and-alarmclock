@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Stopwatch</title>
+<!--     css -->
     <link rel="stylesheet" href="./stopwatch.css">
     <style>
         ul.clock_menu {
             list-style: none;
         }
     </style>
+<!--     fontawesome link -->
     <script src="https://kit.fontawesome.com/a8938533a0.js" crossorigin="anonymous"></script>
 
 </head>
+
+
+
+
 <body>
+<!--     menu for navigation. -->
     <div class="menu"> <i class="fa-solid fa-bars" onclick="toggleMenu()">
         <ul id="clockMenu" class="clock_menu" >
             <li><a href="../index.html">Clock</a>
@@ -27,6 +34,7 @@
         </ul>
     </i></div>
 
+<!--     the stopwatch display and buttons. -->
     <div class="container">
         <div class="wrapper">
             <p>
@@ -37,7 +45,7 @@
             <button class="btn-reset">Reset</button>
         </div>
     </div>
-
+<!-- JavaScript -->
     <script src="./stopwatch.js"></script>
 </body>
 </html>
