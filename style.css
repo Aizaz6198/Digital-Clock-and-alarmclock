@@ -1,9 +1,10 @@
+/* styles to all elements on the page. */
 *{
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
+/* container element that holds the digital clock display. */
 .container{
     padding: 30px;
     color: #fff;
@@ -19,6 +20,7 @@ body {
   padding: 0;
   background-color: grey;
 }
+/* menu element. */
 .menu{
   color: white;
   display: inline-block;
@@ -26,6 +28,7 @@ body {
   font-size: 5rem;
 
 }
+/* clock menu (dropdown menu) that appears when clicking the menu icon. */
 .clock_menu {
   display: none;
   position: absolute;
@@ -35,6 +38,7 @@ body {
   font-size: 1rem;
   height: 5rem;
 }
+/* list items within the clock menu. */
 .clock_menu li {
   margin-bottom: 5px; 
 }
