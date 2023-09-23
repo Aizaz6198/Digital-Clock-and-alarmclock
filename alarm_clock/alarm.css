@@ -1,3 +1,4 @@
+/* styles to all elements on the page */
 * {
     padding: 0;
     margin: 0;
@@ -5,12 +6,16 @@
     font-family: 'Source Sans Pro', sans-serif;
   
   }
+
+/* Styles the entire body of the webpage */
   body {
     background-color: grey;
   }
   .hide {
     display: none;
   }
+
+ /* alarm clock interface. */
   .wrapper {
     background-color: #ffffff;
     width: 90%;
@@ -21,11 +26,14 @@
     left: 50%;
     border-radius: 0.5em;
   }
+/* displaying the current time. */
   .timer-display {
     font-size: 2.18em;
     text-align: center;
     font-family: "Roboto Mono", monospace;
   }
+
+/* input fields for setting the alarm time. */
   .inputs {
     display: flex;
     align-items: center;
@@ -40,6 +48,7 @@
     border-radius: 0.3em;
     padding: 0.4em 0.2em;
   }
+/*  "Add Alarm" button. */
   #set {
     background-color: grey;
     border: none;
@@ -49,6 +58,7 @@
     border-radius: 2em;
     color: #ffffff;
   }
+/*  individual alarms in the alarm list. */
   .alarm {
     display: grid;
     grid-template-columns: 8fr 2fr 2fr;
@@ -85,6 +95,8 @@
     background-color:grey;
     left: 2em;
   }
+
+
   .deleteButton {
     background-color: transparent;
     font-size: 1.5em;
@@ -92,7 +104,7 @@
     border: none;
     cursor: pointer;
   }
-  
+/*  menu element.  */
   .menu{
     color: white;
     display: inline-block;
@@ -100,6 +112,7 @@
     font-size: 5rem;
   
   }
+/* the clock menu for navigation */
   .clock_menu {
     display: none;
     position: absolute;
